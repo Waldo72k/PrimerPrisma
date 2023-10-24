@@ -48,7 +48,7 @@ const HomePage = () => {
         });
       })
       .catch((error) => {
-        console.error("Error adding contendant:", error);
+        console.error("Error agregando contendant:", error);
       });
   };
 
@@ -64,13 +64,13 @@ const HomePage = () => {
       .then((response) => {
         if (response.ok) {
           setData(data.filter((contendant) => contendant.id !== contendantId));
-          console.log(`Contendant with ID ${contendantId} deleted successfully.`);
+          console.log(`El contendiente con ID ${contendantId} fue borrado.`);
         } else {
-          console.error(`Failed to delete contendant with ID ${contendantId}`);
+          console.error(`Error borrando contendiente con ID ${contendantId}`);
         }
       })
       .catch((error) => {
-        console.error("Error deleting contendant:", error);
+        console.error("Error borrando:", error);
       });
   };
 
@@ -86,7 +86,7 @@ const HomePage = () => {
     <div className="bg-blue-900 min-h-screen text-center ">
       <h1 className="text-5xl py-7">Api de Waldo</h1>
 
-      <div className="flex mx-7 justify-center items-center sm:flex-col lg:flex-row">
+      <div className="flex mx-7 justify-center items-center flex-col lg:flex-row">
       <Form
         onFormSubmit={handleFormSubmit}
         onInputChange={handleInputChange}
