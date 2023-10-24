@@ -83,22 +83,24 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-blue-900 min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-blue-900 min-h-screen text-center ">
       <h1 className="text-5xl py-7">Api de Waldo</h1>
 
+      <div className="flex mx-7 justify-center items-center sm:flex-col lg:flex-row">
       <Form
         onFormSubmit={handleFormSubmit}
         onInputChange={handleInputChange}
         newContendant={newContendant}
       />
 
-      <div className="bg-blue-600 text-white rounded-md shadow-lg p-4 w-[90%]">
+      <div className="bg-blue-600 lg:ml-7 text-white rounded-md shadow-lg p-4 w-[90%] lg:h-[80vh]">
         <p className="text-xl mt-6 text-center">Contendientes del apiwaldo</p>
-        <div className="w-full mt-4 items-center flex flex-col overflow-y-auto max-h-96">
+        <div className="w-full mt-4 items-center flex flex-col overflow-y-scroll sm:max-h-96 lg:max-h-[70vh]">
           {data.map((contendant) => (
             <ContendantCard key={contendant.id} contendant={contendant} onDelete={handleDelete} onUpdate={handleUpdate} />
           ))}
         </div>
+      </div>
       </div>
     </div>
   );
