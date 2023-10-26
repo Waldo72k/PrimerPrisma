@@ -49,7 +49,3 @@ Después ve al directorio del proyecto con `cd prisma` (o el nombre que le hayas
 Ahora instala las dependencias necesarias, con `npm install`
 
 Finalmente solo necesitas iniciar la aplicación con `npm run dev`
-
-## Deploy en Vercel
-
-https://formulario-nxt.vercel.app/
