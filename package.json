@@ -17,7 +17,7 @@
   "devDependencies": {
     "autoprefixer": "^10",
     "postcss": "^8",
-    "prisma": "^5.4.2",
+    "prisma": "^5.5.0",
     "tailwindcss": "^3"
   }
 }
